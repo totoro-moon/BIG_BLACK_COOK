@@ -1,0 +1,477 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+//*********************************** BODY ******************************* //
+html,
+body {
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  font-family: "futura", sans-serif;
+}
+.bg-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/beach-1494649_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.fond {
+  background-color: $opacity;
+}
+//********************************** FOOTER *****************************//
+footer {
+  bottom: 0; 
+  position:relative;
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  p {
+    padding-top: 5%;
+    font-family: "futura", sans-serif;
+    color: white;
+  }
+  img {
+    height: 50px;
+  }
+}
+//**************************** HEADER ************************************//
+/* [ON BIG SCREENS] */
+/* Wrapper */
+#hamnav {
+  z-index: 1;
+  width: 100%;
+  background: #000;
+  /* Optional */
+  position: sticky;
+  top: 0;
+}
+/* Hide Hamburger */
+#hamnav label,
+#hamburger {
+  display: none;
+}
+/* Horizontal Menu Items */
+#hamitems {
+  display: flex;
+  justify-content:space-between;
+}
+#hamitems a {
+  width: 8%;
+  padding: 5px 20px 10px 20px;
+  margin-top: 5px;
+  margin-right: 5%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "futura", sans-serif;
+}
+#header__logo {
+  display: inline-block;
+  width: 10%;
+  box-sizing: border-box;
+  font-size: 28px;
+  font-weight: 900px;
+  vertical-align: middle;
+}
+#hamitems a:hover {
+  color: $pinkcolor;
+}
+//********************* MEDIAQUERIES  HEADER ************************//
+
+@media screen and (max-width: 767px) {
+  body {
+    #hamnav {
+      position: absolute;
+    }
+    /* Show Hamburger Icon */
+    #hamnav label {
+      display: inline-block;
+      color: white;
+      background: $pinkcolor;
+      font-style: normal;
+      font-size: 1.4em;
+      padding: 2%;
+    }
+    /* Break down menu items into vertical */
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      padding: 10px 150px 10px 150px;
+      border-top: 1px solid #333;
+      // font-family: "futura", sans-serif;
+    }
+    /* Toggle Show/Hide Menu */
+    #hamitems {
+      display: none;
+    }
+    #hamnav input:checked~#hamitems {
+      display: block;
+    }
+  }
+}
+//******************************* PAGE INDEX ******************************//
+.carribean {
+  padding: 1.6% 0;
+}
+.index {
+  h1 {
+    @include font;
+    padding-bottom: 2%;
+    font-size: 5.2em;
+  }
+  img {
+    border: white solid 10px;
+    height: 240px;
+  }
+}
+//******************************* mediaqueries INDEX ******************************//
+@media screen and (max-width: 1024px) {
+  .carribean {
+    padding: 0;
+  }
+  .index {
+    h1 {
+      font-size: 4em;
+    }
+    img {
+      border: white solid 10px;
+      height: 450px;
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .carribean {
+    padding: 0;
+  }
+  .index {
+    h1 {
+      padding-top: 20%;
+      font-size: 3em;
+    }
+    img {
+      border: white solid 10px;
+      height: 250px;
+    }
+  }
+}
+//*************************** PAGE BIG BLACK QUI ***************************//
+.ct-qui {
+  padding: 1.6% 0;
+}
+.qui {
+  h1 {
+    @include font;
+  }
+  img {
+    border: white solid 10px;
+    height: 530px;
+    margin-right: 10%;
+  }
+  .texte {
+    background-color: $opacity2;
+    padding: 3%;
+    h2 {
+      padding-bottom: 2%;
+    }
+  }
+}
+//******************************* media queries QUI ******************************//
+@media screen and (max-width: 1030px) {
+  .ct-qui {
+    padding: 0;
+  }
+  .qui {
+    .texte {
+      margin-top: 5%;
+    }
+    img {
+      height: 700px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .ct-qui {
+    padding: 0;
+  }
+  .qui {
+    padding-top: 0;
+    h1 {
+      padding-top: 20%;
+      font-size: 1.6em;
+    }
+    .image {
+      padding: 5%;
+      margin: 0;
+    }
+    img {
+      height: 280px;
+    }
+    .texte {
+      h2 {
+        font-size: 1.3em;
+      }
+      padding: 5%;
+    }
+  }
+}
+//*********************** PAGE BIG BLACK OU *******************************//
+.ct-ou {
+  padding: 1.6% 0;
+  height: 550px;
+  h1 {
+    @include font;
+  }
+  .ou {
+    height: 400px;
+    padding: 5%;
+    iframe {
+      height: 100%;
+      width: 80%;
+    }
+    .contact {
+      font-size: 1.2em;
+      color: black;
+      padding: 3%;
+      text-align: center;
+      background-color: $opacity2;
+    }
+  }
+}
+//******************************* mediaqueries OU ******************************//
+@media screen and (max-width: 1200px) {
+  .ct-ou {
+    padding: 0;
+    height: 90vh;
+    h1 {
+      @include font;
+    }
+    .ou {
+      height: 83vh;
+      padding: 0;
+      iframe {
+        padding: 4%;
+        height: 500px;
+        width: 80%;
+      }
+      .contact {
+        height: 30%;
+        padding-top: 6%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .ct-ou {
+    padding: 0;
+    height: 94vh;
+    h1 {
+      padding-top: 20%;
+      font-size: 1.6em;
+    }
+    .ou {
+      height: 81.5%;
+      .carte {
+        height: 300px;
+      }
+      iframe {
+        height: 250px;
+        width: 90%;
+      }
+      .contact {
+        top: -30px;
+        p {
+          font-size: 0.7em;
+          padding: 5px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+//*********************** PAGE BIG BLACK QUOI *******************************//
+.ct-quoi {
+  padding: 1.6% 0;
+  h1 {
+    @include font;
+  }
+  .quoi {
+    .fond2 {
+      background-color: $opacity2;
+    }
+    .col-sm-12,
+    .col-md-4 {
+      padding: 0;
+    }
+    span {
+      color: $pinkcolor;
+      font-weight: bolder
+    }
+    h2 {
+      background-color: black;
+      color: white;
+      font-size: 2em;
+      text-align: center;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+    }
+    .menu {
+      background-color: $pinkcolor;
+    }
+    a {
+      font-size: 1.3em;
+      color: white;
+    }
+  }
+}
+//************************ media queries QUOI ******************************//
+@media screen and (max-width: 767px) {
+  .ct-quoi {
+    padding: 0;
+    h1 {
+      padding-top: 20%;
+      font-size: 1.6em;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ct-quoi {
+    padding: 0;
+  }
+}
+//*********************** PAGE BIG BLACK J'ECOUTE *******************************//
+.ct-ecoute {
+  padding: 1.6% 0;
+  h1 {
+    @include font;
+  }
+  .écoute{
+    padding: 3%;
+    a {
+      color: white;
+    }
+    img{
+      border: 10px solid white;
+      height: 20em;
+      }
+    .input{
+      width: 100%;
+      height: 30px;
+      padding: 0px 15px 0px 15px;
+      border: $bordecolorform;
+      border-bottom: none;
+      outline: none;
+      background: $opacity2;
+    }
+      textarea{
+        width: 100%;
+        height: 98px;
+        padding: 15px;
+        background: $opacity2;
+        outline: none;
+        border: $bordecolorform;
+      }
+      .submit{
+        padding: 3%;
+        width: 100%;
+        color: white;
+        font-family: $font;
+        background-color: $pinkcolor;
+        cursor: pointer;
+        border: $bordecolorform;
+        &:hover {background-color: black;}
+      }
+  }
+}
+//************************ media queries J'ECOUTE ******************************//
+@media screen and (max-width: 1024px) {
+  .ct-ecoute {
+    padding: 0;
+    .écoute{
+      img{
+        border: 10px solid white;
+        height: 40em;
+        }
+      form{
+        padding-left: 17%;
+        }
+      .input{
+        width: 80%;
+        height: 50px;
+      }
+        textarea{
+          width: 80%;
+          height: 220px;
+        }
+        .submit{
+          width: 80%;
+        }
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .ct-ecoute {
+    padding: 0;
+    h1 {
+      padding-top: 10%;
+      font-size: 2.8em;
+    }
+    .écoute{
+      img{
+        border: 10px solid white;
+        height: 36em;
+        }
+      form{
+        padding-left: 10%;
+        }
+      .input{
+        width: 90%;
+        height: 30px;
+      }
+        textarea{
+          width: 90%;
+          height: 150px;
+        }
+        .submit{
+          width: 90%;
+        }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .ct-ecoute {
+    padding: 0;
+    h1 {
+      padding-top: 20%;
+      font-size: 1.6em;
+    }
+    .écoute{
+      img{
+        border: 8px solid white;
+        height: 18em;
+        }
+      form{
+        padding-left: 10%;
+        }
+      .input{
+        width: 90%;
+        height: 30px;
+      }
+        textarea{
+          width: 90%;
+          height: 150px;
+        }
+        .submit{
+          width: 90%;
+        }
+    }
+  }
+}

@@ -1,0 +1,527 @@
+@charset "UTF-8";
+html,
+body {
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  font-family: "futura", sans-serif;
+}
+
+.bg-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/beach-1494649_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.fond {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer p {
+  padding-top: 5%;
+  font-family: "futura", sans-serif;
+  color: white;
+}
+
+footer img {
+  height: 50px;
+}
+
+/* [ON BIG SCREENS] */
+/* Wrapper */
+#hamnav {
+  z-index: 1;
+  width: 100%;
+  background: #000;
+  /* Optional */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/* Hide Hamburger */
+#hamnav label,
+#hamburger {
+  display: none;
+}
+
+/* Horizontal Menu Items */
+#hamitems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#hamitems a {
+  width: 8%;
+  padding: 5px 20px 10px 20px;
+  margin-top: 5px;
+  margin-right: 5%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "futura", sans-serif;
+}
+
+#header__logo {
+  display: inline-block;
+  width: 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 28px;
+  font-weight: 900px;
+  vertical-align: middle;
+}
+
+#hamitems a:hover {
+  color: #df4d8a;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    /* Show Hamburger Icon */
+    /* Break down menu items into vertical */
+    /* Toggle Show/Hide Menu */
+  }
+  body #hamnav {
+    position: absolute;
+  }
+  body #hamnav label {
+    display: inline-block;
+    color: white;
+    background: #df4d8a;
+    font-style: normal;
+    font-size: 1.4em;
+    padding: 2%;
+  }
+  body #hamitems a {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 10px 150px 10px 150px;
+    border-top: 1px solid #333;
+  }
+  body #hamitems {
+    display: none;
+  }
+  body #hamnav input:checked ~ #hamitems {
+    display: block;
+  }
+}
+
+.carribean {
+  padding: 1.6% 0;
+}
+
+.index h1 {
+  padding-top: 3%;
+  font-family: "futura", sans-serif;
+  color: white;
+  font-size: 3em;
+  padding-bottom: 2%;
+  font-size: 5.2em;
+}
+
+.index img {
+  border: white solid 10px;
+  height: 240px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carribean {
+    padding: 0;
+  }
+  .index h1 {
+    font-size: 4em;
+  }
+  .index img {
+    border: white solid 10px;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .carribean {
+    padding: 0;
+  }
+  .index h1 {
+    padding-top: 20%;
+    font-size: 3em;
+  }
+  .index img {
+    border: white solid 10px;
+    height: 250px;
+  }
+}
+
+.ct-qui {
+  padding: 1.6% 0;
+}
+
+.qui h1 {
+  padding-top: 3%;
+  font-family: "futura", sans-serif;
+  color: white;
+  font-size: 3em;
+}
+
+.qui img {
+  border: white solid 10px;
+  height: 530px;
+  margin-right: 10%;
+}
+
+.qui .texte {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 3%;
+}
+
+.qui .texte h2 {
+  padding-bottom: 2%;
+}
+
+@media screen and (max-width: 1030px) {
+  .ct-qui {
+    padding: 0;
+  }
+  .qui .texte {
+    margin-top: 5%;
+  }
+  .qui img {
+    height: 700px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ct-qui {
+    padding: 0;
+  }
+  .qui {
+    padding-top: 0;
+  }
+  .qui h1 {
+    padding-top: 20%;
+    font-size: 1.6em;
+  }
+  .qui .image {
+    padding: 5%;
+    margin: 0;
+  }
+  .qui img {
+    height: 280px;
+  }
+  .qui .texte {
+    padding: 5%;
+  }
+  .qui .texte h2 {
+    font-size: 1.3em;
+  }
+}
+
+.ct-ou {
+  padding: 1.6% 0;
+  height: 550px;
+}
+
+.ct-ou h1 {
+  padding-top: 3%;
+  font-family: "futura", sans-serif;
+  color: white;
+  font-size: 3em;
+}
+
+.ct-ou .ou {
+  height: 400px;
+  padding: 5%;
+}
+
+.ct-ou .ou iframe {
+  height: 100%;
+  width: 80%;
+}
+
+.ct-ou .ou .contact {
+  font-size: 1.2em;
+  color: black;
+  padding: 3%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1200px) {
+  .ct-ou {
+    padding: 0;
+    height: 90vh;
+  }
+  .ct-ou h1 {
+    padding-top: 3%;
+    font-family: "futura", sans-serif;
+    color: white;
+    font-size: 3em;
+  }
+  .ct-ou .ou {
+    height: 83vh;
+    padding: 0;
+  }
+  .ct-ou .ou iframe {
+    padding: 4%;
+    height: 500px;
+    width: 80%;
+  }
+  .ct-ou .ou .contact {
+    height: 30%;
+    padding-top: 6%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .ct-ou {
+    padding: 0;
+    height: 94vh;
+  }
+  .ct-ou h1 {
+    padding-top: 20%;
+    font-size: 1.6em;
+  }
+  .ct-ou .ou {
+    height: 81.5%;
+  }
+  .ct-ou .ou .carte {
+    height: 300px;
+  }
+  .ct-ou .ou iframe {
+    height: 250px;
+    width: 90%;
+  }
+  .ct-ou .ou .contact {
+    top: -30px;
+  }
+  .ct-ou .ou .contact p {
+    font-size: 0.7em;
+    padding: 5px;
+    margin: 0;
+  }
+}
+
+.ct-quoi {
+  padding: 1.6% 0;
+}
+
+.ct-quoi h1 {
+  padding-top: 3%;
+  font-family: "futura", sans-serif;
+  color: white;
+  font-size: 3em;
+}
+
+.ct-quoi .quoi .fond2 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.ct-quoi .quoi .col-sm-12,
+.ct-quoi .quoi .col-md-4 {
+  padding: 0;
+}
+
+.ct-quoi .quoi span {
+  color: #df4d8a;
+  font-weight: bolder;
+}
+
+.ct-quoi .quoi h2 {
+  background-color: black;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding: 0;
+}
+
+.ct-quoi .quoi li {
+  list-style-type: none;
+}
+
+.ct-quoi .quoi .menu {
+  background-color: #df4d8a;
+}
+
+.ct-quoi .quoi a {
+  font-size: 1.3em;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .ct-quoi {
+    padding: 0;
+  }
+  .ct-quoi h1 {
+    padding-top: 20%;
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ct-quoi {
+    padding: 0;
+  }
+}
+
+.ct-ecoute {
+  padding: 1.6% 0;
+}
+
+.ct-ecoute h1 {
+  padding-top: 3%;
+  font-family: "futura", sans-serif;
+  color: white;
+  font-size: 3em;
+}
+
+.ct-ecoute .écoute {
+  padding: 3%;
+}
+
+.ct-ecoute .écoute a {
+  color: white;
+}
+
+.ct-ecoute .écoute img {
+  border: 10px solid white;
+  height: 20em;
+}
+
+.ct-ecoute .écoute .input {
+  width: 100%;
+  height: 30px;
+  padding: 0px 15px 0px 15px;
+  border: solid 2px #df4d8a;
+  border-bottom: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.ct-ecoute .écoute textarea {
+  width: 100%;
+  height: 98px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  outline: none;
+  border: solid 2px #df4d8a;
+}
+
+.ct-ecoute .écoute .submit {
+  padding: 3%;
+  width: 100%;
+  color: white;
+  font-family: "futura", sans-serif;
+  background-color: #df4d8a;
+  cursor: pointer;
+  border: solid 2px #df4d8a;
+}
+
+.ct-ecoute .écoute .submit:hover {
+  background-color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .ct-ecoute {
+    padding: 0;
+  }
+  .ct-ecoute .écoute img {
+    border: 10px solid white;
+    height: 40em;
+  }
+  .ct-ecoute .écoute form {
+    padding-left: 17%;
+  }
+  .ct-ecoute .écoute .input {
+    width: 80%;
+    height: 50px;
+  }
+  .ct-ecoute .écoute textarea {
+    width: 80%;
+    height: 220px;
+  }
+  .ct-ecoute .écoute .submit {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .ct-ecoute {
+    padding: 0;
+  }
+  .ct-ecoute h1 {
+    padding-top: 10%;
+    font-size: 2.8em;
+  }
+  .ct-ecoute .écoute img {
+    border: 10px solid white;
+    height: 36em;
+  }
+  .ct-ecoute .écoute form {
+    padding-left: 10%;
+  }
+  .ct-ecoute .écoute .input {
+    width: 90%;
+    height: 30px;
+  }
+  .ct-ecoute .écoute textarea {
+    width: 90%;
+    height: 150px;
+  }
+  .ct-ecoute .écoute .submit {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .ct-ecoute {
+    padding: 0;
+  }
+  .ct-ecoute h1 {
+    padding-top: 20%;
+    font-size: 1.6em;
+  }
+  .ct-ecoute .écoute img {
+    border: 8px solid white;
+    height: 18em;
+  }
+  .ct-ecoute .écoute form {
+    padding-left: 10%;
+  }
+  .ct-ecoute .écoute .input {
+    width: 90%;
+    height: 30px;
+  }
+  .ct-ecoute .écoute textarea {
+    width: 90%;
+    height: 150px;
+  }
+  .ct-ecoute .écoute .submit {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
